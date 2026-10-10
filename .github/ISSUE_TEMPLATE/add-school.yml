@@ -1,0 +1,43 @@
+name: Add my school
+description: Ask us to recognize your school's email domain for verification.
+title: "Add school: SCHOOL NAME"
+labels: ["add-school"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue is public. Don't include your own email address, student number or any personal details.**
+  - type: input
+    id: school
+    attributes:
+      label: School name
+      placeholder: Example Secondary School
+    validations:
+      required: true
+  - type: input
+    id: domain
+    attributes:
+      label: Student email domain
+      description: Only the part after the @, for example student.exampleschool.ca
+      placeholder: student.exampleschool.ca
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: School website
+      description: Helps us confirm the domain belongs to your school.
+      placeholder: https://exampleschool.ca
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of school
+      options:
+        - High school / secondary school
+        - College
+        - University
+        - Other
+    validations:
+      required: true

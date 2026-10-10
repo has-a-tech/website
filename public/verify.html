@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify you're a student · has-a.tech</title>
+  <meta name="description" content="Confirm you're a student with your school email. Your email stays private.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="module" src="/assets/verify.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">has-a<span>.tech</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="/guide">Guide</a>
+        <a href="/verify" aria-current="page">Verify</a>
+        <a href="/claim">Claim a name</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/has-a-tech/register">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Verify you're a student</h1>
+    <p>has-a.tech is for students. Confirm your school email once, and your GitHub account is marked as verified. We don't keep your email address.</p>
+
+    <div id="page-error" class="notice bad" role="alert" hidden><p id="page-error-text"></p></div>
+
+    <p id="loading" class="status muted">Loading…</p>
+
+    <!-- Step 1: sign in -->
+    <div id="step-signin" class="panel" hidden>
+      <h2>Sign in with GitHub</h2>
+      <p>Use the GitHub account you'll claim your name with. We only see your public profile, and we can't post or change anything on your account.</p>
+      <a class="button" href="/api/auth/login">Sign in with GitHub</a>
+    </div>
+
+    <!-- Step 2: school email -->
+    <form id="step-email" class="panel" hidden novalidate>
+      <h2>Enter your school email</h2>
+      <p>Signed in as <strong class="who"></strong>. <button type="button" class="linklike signout">Not you?</button></p>
+      <div class="field">
+        <label for="email">School email address</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <span class="hint">The address your school gave you, like you@student.yourschool.ca.</span>
+      </div>
+      <p id="email-status" class="status" role="status" aria-live="polite"></p>
+      <button class="button" type="submit">Send code</button>
+    </form>
+
+    <!-- Step 3: code -->
+    <form id="step-code" class="panel" hidden novalidate>
+      <h2>Enter your code</h2>
+      <p>We sent a 6-digit code to <strong id="sent-to"></strong>. Check your spam folder if it's not there in a minute. The code works for 15 minutes.</p>
+      <div class="field">
+        <label for="code">Code</label>
+        <input id="code" class="code-input" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="\d{6}" required>
+      </div>
+      <p id="code-status" class="status" role="status" aria-live="polite"></p>
+      <div class="row">
+        <button class="button" type="submit">Verify</button>
+        <button class="button secondary" type="button" id="resend">Use a different email</button>
+      </div>
+    </form>
+
+    <!-- Done -->
+    <div id="step-done" class="panel" hidden>
+      <h2>You're verified</h2>
+      <p><strong class="who"></strong> is verified as a student at <strong id="school"></strong>. You can now claim your name.</p>
+      <div class="row">
+        <a class="button" href="/claim">Claim your name</a>
+        <button class="button secondary signout" type="button">Sign out</button>
+      </div>
+      <details>
+        <summary>Delete my verification</summary>
+        <p>This removes your verification record. Names you've already registered stay active, but you'll need to verify again to register a new one.</p>
+        <button class="button secondary" type="button" id="delete">Delete my verification</button>
+      </details>
+    </div>
+
+    <section id="no-school-email" aria-labelledby="no-email-title">
+      <h2 id="no-email-title">No school email?</h2>
+      <p>Some schools don't give students an email address, or use one we don't recognize yet.</p>
+      <ul>
+        <li><strong>If your school has an email domain we don't know,</strong> <a href="https://github.com/has-a-tech/website/issues/new?template=add-school.yml">ask us to add it</a>. Don't include your own email address in the request.</li>
+        <li><strong>If you have no school email at all,</strong> email <a href="mailto:verify@has-a.tech">verify@has-a.tech</a> from any address with your GitHub username and your school's name. We'll reply with how to confirm, and a person checks it by hand.</li>
+      </ul>
+      <div class="notice">
+        <p>If we ask for proof such as a photo of a student card, cover everything except your name, your school and the school year: no student number, photo or date of birth. We delete it as soon as we've checked, and it's never posted anywhere. Never put it in a GitHub issue or pull request.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by <a href="/about">Bharat Garsondiya</a>. Free and open source, always.</p>
+      <nav aria-label="Footer">
+        <a href="/terms">Rules</a>
+        <a href="/privacy">Privacy</a>
+        <a href="mailto:abuse@has-a.tech">Report abuse</a>
+        <a href="https://github.com/has-a-tech/register">Source</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

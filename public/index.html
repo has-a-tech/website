@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>has-a.tech: free web addresses for students</title>
+  <meta name="description" content="Students get a free yourname.has-a.tech address for their website. Host it free on GitHub Pages.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="module" src="/assets/home.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">has-a<span>.tech</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="/guide">Guide</a>
+        <a href="/verify">Verify</a>
+        <a href="/claim">Claim a name</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/has-a-tech/register">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Every student deserves their own corner of the internet.</h1>
+      <label class="address" for="name">
+        <input id="name" type="text" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false"
+               maxlength="63" placeholder="you" aria-describedby="name-status"><span class="suffix">.has-a.tech</span>
+      </label>
+      <p id="name-status" class="status" role="status" aria-live="polite"></p>
+      <p class="lead">A free web address for your portfolio, blog, projects or art. For high school, college and university students.</p>
+      <div class="row">
+        <a class="button" id="claim-link" href="/claim">Claim your name</a>
+        <a class="button secondary" href="/guide">Read the guide</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="how">
+      <h2 id="how">How it works</h2>
+      <ol class="steps">
+        <li>
+          <h3>Build your site</h3>
+          <p>Put your website on GitHub Pages. It's free, and you don't need to have built a website before. The guide walks you through it.</p>
+        </li>
+        <li>
+          <h3>Verify you're a student</h3>
+          <p>Sign in with GitHub and confirm your school email with a code. Your email stays private.</p>
+        </li>
+        <li>
+          <h3>Claim your name</h3>
+          <p>Open a request on GitHub. Our bot checks it in a minute, and a person approves it. Then your address is live.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Questions</h2>
+      <dl class="faq">
+        <dt>Does it cost anything?</dt>
+        <dd>No. The address is free, and so is hosting on GitHub Pages. Nobody will ask you for payment details.</dd>
+        <dt>Who can join?</dt>
+        <dd>Students aged 13 or older at a high school, college or university, with a GitHub account that's at least 30 days old.</dd>
+        <dt>I don't have a school email address.</dt>
+        <dd>You can still verify. See <a href="/verify#no-school-email">verifying without a school email</a>.</dd>
+        <dt>What happens to my email address?</dt>
+        <dd>We use it once to send you a code. We don't store it, publish it or share it. The <a href="/privacy">privacy page</a> has the details.</dd>
+        <dt>What can I put on my site?</dt>
+        <dd>Anything that's yours and legit: portfolios, projects, blogs, art, clubs. No scams, phishing, impersonation or harmful content. Read the <a href="/terms">rules</a>.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by <a href="/about">Bharat Garsondiya</a>. Free and open source, always.</p>
+      <nav aria-label="Footer">
+        <a href="/terms">Rules</a>
+        <a href="/privacy">Privacy</a>
+        <a href="mailto:abuse@has-a.tech">Report abuse</a>
+        <a href="https://github.com/has-a-tech/register">Source</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

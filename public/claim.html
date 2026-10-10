@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claim a name · has-a.tech</title>
+  <meta name="description" content="Fill in a short form and we'll prepare your has-a.tech request on GitHub.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="module" src="/assets/claim.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">has-a<span>.tech</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="/guide">Guide</a>
+        <a href="/verify">Verify</a>
+        <a href="/claim" aria-current="page">Claim a name</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/has-a-tech/register">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Claim a name</h1>
+    <p>Fill this in and we'll prepare your request on GitHub. New to this? Read the <a href="/guide">guide</a> first.</p>
+
+    <div id="verify-reminder" class="notice warn" hidden>
+      <p>You haven't verified as a student yet. <a href="/verify">Verify first</a>, or the bot will turn your request down.</p>
+    </div>
+    <div id="verified-note" class="notice ok" hidden>
+      <p id="verified-text"></p>
+    </div>
+
+    <form id="claim-form" novalidate>
+      <div class="field">
+        <label for="name">Your name <span class="hint">Lowercase letters, numbers and hyphens.</span></label>
+        <div class="row">
+          <input id="name" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="63" required>
+          <span><code>.has-a.tech</code></span>
+        </div>
+        <p id="name-status" class="status" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="field">
+        <label for="username">Your GitHub username</label>
+        <input id="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="39" required>
+      </div>
+
+      <div class="field">
+        <label for="host">Where is your website hosted?</label>
+        <select id="host">
+          <option value="github">GitHub Pages</option>
+          <option value="azure">Azure Static Web Apps</option>
+          <option value="vercel">Vercel</option>
+          <option value="netlify">Netlify</option>
+          <option value="cloudflare">Cloudflare Pages</option>
+          <option value="server">My own server (IP address)</option>
+          <option value="other">Somewhere else (hostname)</option>
+        </select>
+      </div>
+
+      <div class="field" id="target-field">
+        <label for="target" id="target-label">Your site's address</label>
+        <input id="target" type="text" autocapitalize="none" spellcheck="false" maxlength="253">
+        <span class="hint" id="target-hint"></span>
+      </div>
+
+      <div class="field">
+        <label for="description">What is your site? <span class="hint">One sentence, 10 to 300 characters. This is public.</span></label>
+        <textarea id="description" rows="2" maxlength="300" required></textarea>
+      </div>
+    </form>
+
+    <section class="output" aria-labelledby="preview-title">
+      <h2 id="preview-title">Your file</h2>
+      <p>This is what you're adding: <code id="file-path">domains/yourname.json</code></p>
+      <pre><code id="preview"></code></pre>
+      <p id="form-problem" class="status bad" role="alert"></p>
+      <div class="row">
+        <a class="button" id="create" href="#" aria-disabled="true">Create my file on GitHub</a>
+        <button class="button secondary" id="copy" type="button">Copy</button>
+      </div>
+      <p class="hint">GitHub will make your own copy (a fork) of the register and open your file. Click <strong>Commit changes…</strong>, then <strong>Propose changes</strong>, then <strong>Create pull request</strong>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by <a href="/about">Bharat Garsondiya</a>. Free and open source, always.</p>
+      <nav aria-label="Footer">
+        <a href="/terms">Rules</a>
+        <a href="/privacy">Privacy</a>
+        <a href="mailto:abuse@has-a.tech">Report abuse</a>
+        <a href="https://github.com/has-a-tech/register">Source</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · has-a.tech</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">has-a<span>.tech</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="/guide">Guide</a>
+        <a href="/verify">Verify</a>
+        <a href="/claim">Claim a name</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/has-a-tech/register">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Privacy</h1>
+    <p>Last updated October 9, 2026.</p>
+    <p>Many people who use has-a.tech are under 18, so we collect as little as we can and keep it for as short a time as we can. This page explains exactly what we collect.</p>
+
+    <h2>What we collect and why</h2>
+    <h3>When you sign in with GitHub</h3>
+    <p>GitHub tells us your username and when your account was created. We use the creation date once, to check your account is at least 30 days old, and don't store it. We don't get access to your repositories, and we can't post or change anything on your account.</p>
+
+    <h3>When you verify your school email</h3>
+    <ul>
+      <li>We use your email address once, to send you a code. <strong>We don't store your email address.</strong></li>
+      <li>We store a <em>keyed fingerprint</em> of it (a scrambled version made with a secret key) so one school email can't verify several GitHub accounts. The fingerprint can't be read back into your address by anyone who doesn't have our secret key.</li>
+      <li>We store your school's email domain (for example <code>utoronto.ca</code>), your GitHub username, and when you verified.</li>
+    </ul>
+
+    <h3>If you verify by contacting us</h3>
+    <p>Whatever you send us is used only to check you're a student, then deleted. We keep a note that your GitHub account was verified by hand, and nothing else.</p>
+
+    <h3>Your domain file</h3>
+    <p>The file you add to the <a href="https://github.com/has-a-tech/register">register</a> is public, like everything on GitHub: your name, GitHub username, description and where your address points. Don't put personal information in it.</p>
+
+    <h3>Cookies</h3>
+    <p>We use two cookies, only so sign-in works: one that lasts 10 minutes while you sign in with GitHub, and one that keeps you signed in for up to an hour. No ads, no analytics, no tracking.</p>
+
+    <h3>Abuse prevention</h3>
+    <p>To stop people from flooding inboxes with codes, we count how many codes are requested. These counters use scrambled versions of your IP address and email, never the real ones, and they're deleted after about an hour.</p>
+
+    <h2>Who else handles your data</h2>
+    <ul>
+      <li><strong>Cloudflare</strong> runs our website and stores the verification records.</li>
+      <li><strong>Resend</strong> delivers the email with your code, so it sees your school email address to send it.</li>
+      <li><strong>GitHub</strong> handles sign-in and hosts the public register.</li>
+    </ul>
+    <p>We never sell or share your information with anyone else.</p>
+
+    <h2>How long we keep it</h2>
+    <ul>
+      <li>Codes: deleted after 15 minutes, or as soon as they're used.</li>
+      <li>Verification records: until you delete them, or until you stop using has-a.tech and ask us to remove them.</li>
+      <li>Rate-limit counters: about an hour.</li>
+    </ul>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li><strong>Delete your verification</strong> any time on the <a href="/verify">verify page</a> (sign in, then "Delete my verification").</li>
+      <li><strong>Remove your address</strong> by deleting your file from the register with a pull request.</li>
+      <li><strong>Ask us anything,</strong> or ask us to delete your data, at <a href="mailto:verify@has-a.tech">verify@has-a.tech</a>. A parent or guardian can contact us on your behalf too.</li>
+    </ul>
+
+    <h2>Changes</h2>
+    <p>If we change this policy, we'll update this page and the date at the top.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by <a href="/about">Bharat Garsondiya</a>. Free and open source, always.</p>
+      <nav aria-label="Footer">
+        <a href="/terms">Rules</a>
+        <a href="/privacy" aria-current="page">Privacy</a>
+        <a href="mailto:abuse@has-a.tech">Report abuse</a>
+        <a href="https://github.com/has-a-tech/register">Source</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

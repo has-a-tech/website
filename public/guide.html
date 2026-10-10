@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guide: get your has-a.tech address</title>
+  <meta name="description" content="Step by step: build a free website on GitHub Pages, verify you're a student, and claim yourname.has-a.tech.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">has-a<span>.tech</span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="/guide" aria-current="page">Guide</a>
+        <a href="/verify">Verify</a>
+        <a href="/claim">Claim a name</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/has-a-tech/register">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Get your has-a.tech address</h1>
+    <p>This guide takes you from nothing to a live website at <code>yourname.has-a.tech</code>. It takes about 30 minutes, plus waiting for a review. You don't need to know how to code.</p>
+
+    <div class="guide">
+      <nav class="toc" aria-label="On this page">
+        <p><a href="#before">Before you start</a></p>
+        <ol>
+          <li><a href="#site">Build your site on GitHub Pages</a></li>
+          <li><a href="#verify">Verify you're a student</a></li>
+          <li><a href="#name">Choose your name</a></li>
+          <li><a href="#request">Send your request</a></li>
+          <li><a href="#review">Wait for the review</a></li>
+          <li><a href="#connect">Connect your address</a></li>
+        </ol>
+        <p><a href="#other-hosts">Using another host</a><br>
+        <a href="#troubleshooting">Troubleshooting</a><br>
+        <a href="#changes">Changing or removing</a></p>
+      </nav>
+
+      <div>
+        <section id="before">
+          <h2>Before you start</h2>
+          <p>You need:</p>
+          <ul>
+            <li><strong>A GitHub account that's at least 30 days old.</strong> If you don't have one, <a href="https://github.com/signup">sign up</a> now and come back in a month. This rule helps keep out spammers.</li>
+            <li><strong>Your school email address</strong>, or another way to show you're a student (see <a href="/verify#no-school-email">no school email</a>).</li>
+            <li><strong>To be 13 or older.</strong> That's GitHub's minimum age too.</li>
+          </ul>
+        </section>
+
+        <section id="site">
+          <h2><span class="step-num">1.</span> Build your site on GitHub Pages</h2>
+          <p>Your address points to a website, so the website needs to exist first. GitHub Pages hosts it for free. If you already have a site somewhere else, skip to <a href="#other-hosts">using another host</a>.</p>
+
+          <h3>Create the repository</h3>
+          <ol>
+            <li>On GitHub, click <strong>+</strong> (top right) and choose <strong>New repository</strong>.</li>
+            <li>For the name, type <code>your-username.github.io</code>, using your exact GitHub username. For example, if you're <code>maya-codes</code>, it's <code>maya-codes.github.io</code>.</li>
+            <li>Choose <strong>Public</strong>, tick <strong>Add a README file</strong>, and click <strong>Create repository</strong>.</li>
+          </ol>
+
+          <h3>Add your first page</h3>
+          <ol>
+            <li>In your new repository, click <strong>Add file → Create new file</strong>.</li>
+            <li>Name it <code>index.html</code>.</li>
+            <li>Paste this in, and change the text to be about you:</li>
+          </ol>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Maya's site&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hi, I'm Maya&lt;/h1&gt;
+  &lt;p&gt;I'm a grade 11 student who likes robotics and drawing.&lt;/p&gt;
+  &lt;h2&gt;Projects&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Line-following robot for our school club&lt;/li&gt;
+    &lt;li&gt;A comic about my cat&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <ol start="4">
+            <li>Click <strong>Commit changes…</strong>, then <strong>Commit changes</strong> again.</li>
+          </ol>
+
+          <h3>Turn on GitHub Pages</h3>
+          <ol>
+            <li>In the repository, click <strong>Settings</strong>, then <strong>Pages</strong> in the left menu.</li>
+            <li>Under <strong>Build and deployment</strong>, set <strong>Source</strong> to <strong>Deploy from a branch</strong>.</li>
+            <li>Set <strong>Branch</strong> to <strong>main</strong> and the folder to <strong>/ (root)</strong>, then click <strong>Save</strong>.</li>
+            <li>Wait a minute or two, then open <code>https://your-username.github.io</code>. You should see your page.</li>
+          </ol>
+          <div class="notice">
+            <p>Your site has to have real content before we can approve your name. A finished design isn't needed, just something that's genuinely yours.</p>
+          </div>
+        </section>
+
+        <section id="verify">
+          <h2><span class="step-num">2.</span> Verify you're a student</h2>
+          <ol>
+            <li>Go to the <a href="/verify">verify page</a> and click <strong>Sign in with GitHub</strong>. We only see your public profile.</li>
+            <li>Enter your school email address and click <strong>Send code</strong>.</li>
+            <li>Check your school inbox (and spam folder) for a 6-digit code, and enter it.</li>
+          </ol>
+          <p>You only do this once. We don't keep your email address: we just remember that your GitHub account belongs to a verified student.</p>
+        </section>
+
+        <section id="name">
+          <h2><span class="step-num">3.</span> Choose your name</h2>
+          <p>Type a name into the box on the <a href="/">home page</a> to see if it's free. Names:</p>
+          <ul>
+            <li>use only lowercase letters, numbers and hyphens, and can't start or end with a hyphen</li>
+            <li>are at least 2 characters long</li>
+            <li>can't look like a login page or a well-known brand (like <code>paypal</code> or <code>secure-login</code>), since those are used for scams</li>
+          </ul>
+          <p>Each GitHub account gets one name. Using your own name or nickname is a good choice.</p>
+        </section>
+
+        <section id="request">
+          <h2><span class="step-num">4.</span> Send your request</h2>
+          <p>Your request is a small file added to our <a href="https://github.com/has-a-tech/register">register on GitHub</a>. The easy way:</p>
+          <ol>
+            <li>Open the <a href="/claim">claim helper</a>, fill in the form, and click <strong>Create my file on GitHub</strong>.</li>
+            <li>GitHub opens with your file ready. Click <strong>Commit changes…</strong>. GitHub makes your own copy (a "fork") automatically.</li>
+            <li>Click <strong>Propose changes</strong>, then <strong>Create pull request</strong>.</li>
+            <li>Fill in the short checklist, including the link to your site, and click <strong>Create pull request</strong> again.</li>
+          </ol>
+
+          <h3>What the file looks like</h3>
+          <p>If you'd rather write it yourself, create <code>domains/yourname.json</code> in your fork:</p>
+<pre><code>{
+  "description": "My portfolio: robotics and drawing projects.",
+  "owner": {
+    "username": "maya-codes"
+  },
+  "records": {
+    "CNAME": "maya-codes.github.io"
+  }
+}</code></pre>
+          <ul>
+            <li><code>description</code>: what your site is, in a sentence</li>
+            <li><code>owner.username</code>: your GitHub username. It must match the account sending the request.</li>
+            <li><code>records</code>: where your address points. For GitHub Pages, that's <code>your-username.github.io</code>.</li>
+          </ul>
+          <p>Don't put your email address in this file. Everything in it is public.</p>
+        </section>
+
+        <section id="review">
+          <h2><span class="step-num">5.</span> Wait for the review</h2>
+          <p>Within a minute, our bot comments on your pull request:</p>
+          <ul>
+            <li><strong>✅ Looks good:</strong> a person will look at your site and approve it, usually within a few days.</li>
+            <li><strong>❌ Problems found:</strong> the comment says what to fix. Edit your file in your fork, and the bot checks again automatically.</li>
+          </ul>
+          <p>Keep an eye on your GitHub notifications in case a reviewer asks a question. Once your request is merged, your address goes live within a few minutes.</p>
+        </section>
+
+        <section id="connect">
+          <h2><span class="step-num">6.</span> Connect your address</h2>
+          <p>GitHub Pages needs to know about your new address.</p>
+          <ol>
+            <li>In your <code>your-username.github.io</code> repository, go to <strong>Settings → Pages</strong>.</li>
+            <li>Under <strong>Custom domain</strong>, type <code>yourname.has-a.tech</code> and click <strong>Save</strong>.</li>
+            <li>Wait for the DNS check to pass. It shows a green tick.</li>
+            <li>Once it's available, tick <strong>Enforce HTTPS</strong>. GitHub sets up the security certificate for you, which can take up to an hour.</li>
+          </ol>
+          <p>Visit <code>https://yourname.has-a.tech</code>. That's your site, at your own address.</p>
+        </section>
+
+        <section id="other-hosts">
+          <h2>Using another host</h2>
+          <p>Any host that supports custom domains works. Use the right value in <code>records</code>, then add <code>yourname.has-a.tech</code> as a custom domain in your host's settings after your request is merged.</p>
+          <ul>
+            <li><strong>Azure Static Web Apps:</strong> <code>"CNAME": "your-app.azurestaticapps.net"</code>. In Azure, choose Custom domains → Add → Custom domain on other DNS.</li>
+            <li><strong>Vercel:</strong> <code>"CNAME": "cname.vercel-dns.com"</code></li>
+            <li><strong>Netlify:</strong> <code>"CNAME": "your-site.netlify.app"</code></li>
+            <li><strong>Cloudflare Pages:</strong> <code>"CNAME": "your-project.pages.dev"</code></li>
+            <li><strong>Your own server:</strong> <code>"A": ["203.0.113.10"]</code> with your server's public IP address</li>
+          </ul>
+          <p>If your host asks you to add a TXT record to prove you own the address, send a second request with a file like <code>domains/_vercel.yourname.json</code> containing <code>"records": { "TXT": "the-value-they-give-you" }</code>.</p>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <h3>The bot says my account is too new</h3>
+          <p>Your GitHub account needs to be at least 30 days old. Come back once it is.</p>
+          <h3>The bot says I'm not verified</h3>
+          <p>Make sure you completed the <a href="/verify">verify page</a> while signed in to the same GitHub account that opened the pull request. Then close and reopen your pull request to run the check again.</p>
+          <h3>My browser says the site is "not secure"</h3>
+          <p>Your host hasn't issued a certificate for your address yet. Check you added <code>yourname.has-a.tech</code> as a custom domain in your host's settings, then give it up to an hour.</p>
+          <h3>I see a 404 page</h3>
+          <p>Check that <code>index.html</code> is in the main folder of your repository, and that the custom domain is saved in Settings → Pages.</p>
+          <h3>My school isn't recognized</h3>
+          <p><a href="https://github.com/has-a-tech/website/issues/new?template=add-school.yml">Ask us to add your school</a>, or <a href="/verify#no-school-email">verify by email</a> instead.</p>
+        </section>
+
+        <section id="changes">
+          <h2>Changing or removing your address</h2>
+          <p>Open a new pull request that edits or deletes your file in <code>domains/</code>. Only you can change your own name.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made by <a href="/about">Bharat Garsondiya</a>. Free and open source, always.</p>
+      <nav aria-label="Footer">
+        <a href="/terms">Rules</a>
+        <a href="/privacy">Privacy</a>
+        <a href="mailto:abuse@has-a.tech">Report abuse</a>
+        <a href="https://github.com/has-a-tech/register">Source</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

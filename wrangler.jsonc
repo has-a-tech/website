@@ -1,0 +1,29 @@
+{
+  // Cloudflare Workers config for has-a.tech. See SETUP.md.
+  "name": "has-a-tech",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // Run the Worker first so www.has-a.tech can redirect to has-a.tech.
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "has-a.tech", "custom_domain": true },
+    { "pattern": "www.has-a.tech", "custom_domain": true }
+  ],
+  "kv_namespaces": [
+    // Replace with the id printed by: npx wrangler kv namespace create VERIFY
+    { "binding": "VERIFY", "id": "d382a4748d25475881159aa7c1381898" }
+  ],
+  "vars": {
+    "SITE_URL": "https://has-a.tech",
+    "EMAIL_FROM": "has-a.tech <verify@has-a.tech>",
+    // Replace with your GitHub OAuth app's Client ID (not secret).
+    "GITHUB_CLIENT_ID": "Ov23liQNpb3irJQomhkk"
+  }
+  // Secrets (set with `npx wrangler secret put NAME`, never put them here):
+  //   GITHUB_CLIENT_SECRET, SESSION_SECRET, HMAC_SECRET, RESEND_API_KEY, STATUS_API_KEY
+}
