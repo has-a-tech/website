@@ -82,11 +82,30 @@
       <p>This is what you're adding: <code id="file-path">domains/yourname.json</code></p>
       <pre><code id="preview"></code></pre>
       <p id="form-problem" class="status bad" role="alert"></p>
-      <div class="row">
-        <a class="button" id="create" href="#" aria-disabled="true">Create my file on GitHub</a>
-        <button class="button secondary" id="copy" type="button">Copy</button>
-      </div>
-      <p class="hint">GitHub will make your own copy (a fork) of the register and open your file. Click <strong>Commit changes…</strong>, then <strong>Propose changes</strong>, then <strong>Create pull request</strong>.</p>
+
+      <ol class="claim-steps">
+        <li>
+          <p><strong>Make your own copy of the register (a fork).</strong> On GitHub, click <strong>Create fork</strong>, then come back to this page.</p>
+          <div class="row">
+            <a class="button" id="fork" href="https://github.com/has-a-tech/register/fork" target="_blank" rel="noopener">Fork the register</a>
+            <button class="button secondary" id="fork-recheck" type="button">Check again</button>
+          </div>
+          <p id="fork-status" class="status" role="status" aria-live="polite"></p>
+        </li>
+        <li>
+          <p><strong>Add your file to your fork.</strong> GitHub opens with it filled in. Click <strong>Commit changes…</strong>, keep <strong>Commit directly to the main branch</strong>, and click <strong>Commit changes</strong>.</p>
+          <div class="row">
+            <a class="button" id="create" href="#" aria-disabled="true" target="_blank" rel="noopener">Create my file on GitHub</a>
+            <button class="button secondary" id="copy" type="button">Copy</button>
+          </div>
+        </li>
+        <li>
+          <p><strong>Send your request.</strong> Fill in the short checklist and click <strong>Create pull request</strong>.</p>
+          <div class="row">
+            <a class="button" id="pr" href="#" aria-disabled="true" target="_blank" rel="noopener">Open my pull request</a>
+          </div>
+        </li>
+      </ol>
     </section>
   </main>
 

@@ -177,6 +177,9 @@ input:focus, select:focus, textarea:focus { border-color: var(--focus); outline:
 /* Claim helper */
 .output { max-width: var(--measure); }
 .output pre { margin-bottom: 1rem; }
+.claim-steps { padding-left: 1.2rem; }
+.claim-steps li { margin-bottom: 1.5rem; }
+.claim-steps p { margin-bottom: 0.6rem; }
 
 /* Verify */
 .panel h2 { margin-top: 0; }
