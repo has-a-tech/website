@@ -19,4 +19,8 @@ Open `src/schools.js`, add the domain to `SCHOOL_DOMAINS` (alphabetical order), 
 
 The service stores no email addresses. See [the privacy page](https://has-a.tech/privacy) and `src/index.js` for exactly what's kept.
 
-Maintainers: see [SETUP.md](./SETUP.md).
+
+
+## License
+
+[MIT](./LICENSE). The has-a.tech name and logo aren't covered by the license; see [the legal page](https://has-a.tech/legal).

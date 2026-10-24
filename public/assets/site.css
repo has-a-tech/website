@@ -189,3 +189,9 @@ input:focus, select:focus, textarea:focus { border-color: var(--focus); outline:
 @media (prefers-reduced-motion: no-preference) {
   .address input { transition: width 120ms ease; }
 }
+
+/* Legal page promises: a highlighter tick per line. */
+.promises { list-style: none; padding: 0; margin: 0; }
+.promises li { position: relative; padding-left: 2.1rem; margin-bottom: 0.8rem; }
+.promises li:last-child { margin-bottom: 0; }
+.promises li::before { content: "✓"; position: absolute; left: 0; top: 0.05em; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--marker); color: var(--marker-ink); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; }
